@@ -3,7 +3,7 @@
 This repo contains files to build a docker container that will monitor input devices connected to a linux machine, for instance bluetooth remote controls, but any input device can be monitored. The resulting keypress codes will be sent to your Home Assistant instance.
 It's tested and works fine on a Raspberry Pi running Raspbian or an Intel NUC running Ubuntu. If you get it to work on any other Linux distribution, please leave a comment.
 
-This assumes that you know how docker containers are built and run and that you have already paired your bluetooth remote with the linux machine so I'm not including any instructions for pairing or for using the docker commands.
+The instructions assume that you know how docker containers are built and run and that you have already paired your bluetooth remote with the linux machine so I'm not including any instructions for pairing or for using the docker commands.
 
 
 
