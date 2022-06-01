@@ -36,7 +36,7 @@ This will list the device names and the device paths for all input devices on yo
 * Sleep Button event0
 
 In my case, the remote control I want is named
-`SG.Ltd SG Control Mic Keyboard` located in the path `/dev/input/event3`. We could use the path directly in the script, but since the device path might change if you add or remove hardvare or unpair and repair a device, if safer to use the device name.
+`SG.Ltd SG Control Mic Keyboard` located in the path `/dev/input/event3`. We could use the path directly in the script, but since the device path might change if you add or remove hardvare or unpair and repair a device, it's safer to use the device name.
 
 ### 2 Edit the `config.yaml` file
 Copy the name to the devices list in the `/bt_remote_docker/config.yaml` file and edit all other relevant entries in the config file.
