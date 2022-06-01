@@ -11,6 +11,7 @@ This assumes that you know how docker containers are built and run and that you 
 
 First, download the `bt_remote_docker` folder in this repo and ssh to the `bt_remote_docker/code` directory.
 Make sure you have pip installed required modules in the `/code/reqs.txt`file. They are only needed to run the `find_devices.py` script.
+
 Run `sudo python3 find_devices.py`. Sudo is needed to access the /dev/ devices.
 This will list the device names and the device paths for all input devices on your machine. Example output from an Ubuntu machine:
 
