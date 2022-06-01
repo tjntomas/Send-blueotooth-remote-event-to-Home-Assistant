@@ -6,7 +6,7 @@ This assumes that you know how docker containers are built and run and that you 
 
 
 
-# 1. Find the input device to use
+### 1. Find the input device to use
 
 First, download the `bt_remote_docker` folder in this repo and ssh to the `bt_remote_docker/code` directory.
 Make sure you have pip installed required modules in the `/code/reqs.txt`file. They are only needed to run the `find_devices.py` script.
@@ -36,22 +36,22 @@ This will list the device names and the device paths for all input devices on yo
 In my case, the remote control I want is named
 `SG.Ltd SG Control Mic Keyboard` located in the path `/dev/input/event3`
 
-# 2 Edit the `config.yaml` file
+### 2 Edit the `config.yaml` file
 Copy the name to the devices list in the `/bt_remote_docker/config.yaml` file and edit all other relevant entries in the config file.
 
-# 3 Build and run the docker container
+### 3 Build and run the docker container
 Make sure the build.sh and run.sh scripts are executable by `sudo chmod +x build.sh && sudo chmod +x run.sh`
 Now build the container with `./build.sh`
 
-# 4 Edit the path to your config.yaml file
+### 4 Edit the path to your config.yaml file
 Edit the `run.sh` file and change the line
 `-v /home/dev/py/bt_remote:/config \` 
 change `/home/dev/py/bt_remote` to the local path where you store the config.yaml file. 
 
-# 5 Run the container
+### 5 Run the container
 Now run the container with `./run.sh`
 
-# 6 View the event in Home Asssistant
+### 6 View the event in Home Asssistant
 Open developers tools in HA and go to events.
 In the "event to subscribe to" field, enter the `event_name`from your edited `config.yaml` file, default is `mi_bt_remote`, and press the "Start listening" button. You should now see the incoming events when a remote button is pressed.
 
