@@ -55,5 +55,5 @@ Now run the container with `./run.sh`
 
 ### 6 View the events in Home Asssistant
 Open developer tools in HA and go to events.
-In the "event to subscribe to" field, enter the `event_name`from your edited `config.yaml` file, default is `mi_bt_remote`, and press the "Start listening" button. You should now see the incoming events when a remote button is pressed, held or released, indicated as `down`, `up` and `hold` respectively in the event payload.
+In the "event to subscribe to" field, enter the `event_name`from your edited `config.yaml` file, default is `mi_bt_remote`, and press the "Start listening" button. You should now see the incoming events when a remote button is pressed, released or held, indicated as `down`, `up` and `hold` respectively in the event payload.
 
