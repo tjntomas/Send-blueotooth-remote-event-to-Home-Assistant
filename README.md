@@ -41,7 +41,7 @@ In my case, the remote control I want is named
 ### 2 Edit the `config.yaml` file
 Copy the name to the devices list in the `/bt_remote_docker/config.yaml` file and edit all other relevant entries in the config file.
 
-### 3 Build and run the docker container
+### 3 Build the docker container
 Make sure the build.sh and run.sh scripts are executable by `sudo chmod +x build.sh && sudo chmod +x run.sh`
 Now build the container with `./build.sh`
 
