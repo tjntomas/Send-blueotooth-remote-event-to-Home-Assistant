@@ -34,7 +34,7 @@ In my case, the remote controls I want is named
 `SG.Ltd SG Control Mic Keyboard` located in the path `/dev/input/event3`
 
 # 2 Edit the `config.yaml` file
-Copy the name to the devices list in the `config.yaml` file and edit all other relevant entries in the config file.
+Copy the name to the devices list in the `/bt_remote_docker/config.yaml` file and edit all other relevant entries in the config file.
 
 # 3 Build and run the docker container
 Make sure the build.sh and run.sh scripts are executable by `sudo chmod +x build.sh && sudo chmod +x run.sh`
