@@ -34,11 +34,17 @@ In my case, the remote controls I want is named
 `SG.Ltd SG Control Mic Keyboard` located in the path /dev/input/event3
 
 # 2 Edit the `config.yaml` file
-Copy the name to the devices list in the config.yaml file and edit all other relevat entries in the config file.
+Copy the name to the devices list in the config.yaml file and edit all other relevant entries in the config file.
 
 # 3 Build and run the docker container
 Make sure the build.sh and run.sh scripts are executable by `sudo chmod +x build.sh && sudo chmod +x run.sh`
 Now build the container with `./build.sh`
-If the build was successful (You can ignore any pip version warning) procced to run the container with `./run.sh`
 
+# 4 Edit the path to your config.yaml file
+Edit the `run.sh` file and change the line
+`-v /home/dev/py/bt_remote:/config \` 
+change `/home/dev/py/bt_remote` to the local path where you store the config.yaml file. 
+
+# 5 Run the container
+Now run the container with `./run.sh`
 
