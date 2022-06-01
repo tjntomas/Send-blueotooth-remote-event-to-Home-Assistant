@@ -1,0 +1,31 @@
+parameters:
+    # HA connection parameters.
+    ha_token: "A valid long-lived HA token"
+    ha_url: http://192.168.1.47:8123/api/events/
+
+    # The name of the event to fire in HA. Use any name you find suitable.
+    event_name: mi_bt_remote
+
+
+    # The name/names of the input devices to monitor. You can get the name of your devices by running the 
+    # find_devices.py script in the /code folder. Run with "sudo python3 find_devices.py".
+    devices:
+      - "SG.Ltd SG Control Mic Keyboard"
+      - "SG.Ltd SG Control Mic Consumer Control"
+      - "SG.Ltd SG Control Mic System Control"
+      - "SG.Ltd SG Control Mic"
+
+    # Buttons that should fire repeating events until the button is released.
+    # If you don't have any repeating keys, add an empty list
+    # i.e. repeating_keys: []
+    repeating_keys: 
+      - KEY_PREVIOUS_SONG
+      - KEY_NEXT_SONG
+      - KEY_VOLUMEUP
+      - KEY_VOLUMEDOWN
+      
+    repeat_delay: 0.08
+    initial_delay: 2
+
+    debug_mode: True
+    

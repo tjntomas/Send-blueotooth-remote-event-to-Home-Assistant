@@ -1,0 +1,19 @@
+Telink Trust Keyboard & Mouse event8
+Telink Trust Keyboard & Mouse System Control event7
+Telink Trust Keyboard & Mouse Consumer Control event6
+Telink Trust Keyboard & Mouse event5
+HDA Intel PCH HDMI/DP,pcm=10 event18
+HDA Intel PCH HDMI/DP,pcm=9 event17
+HDA Intel PCH HDMI/DP,pcm=8 event16
+HDA Intel PCH HDMI/DP,pcm=7 event15
+HDA Intel PCH HDMI/DP,pcm=3 event14
+HDA Intel PCH Headphone event13
+HDA Intel PCH Mic event12
+DP-2 event11
+Video Bus event10
+ITE8708 CIR transceiver event9
+SG.Ltd SG Control Mic event4
+SG.Ltd SG Control Mic Keyboard event3
+Power Button event2
+Power Button event1
+Sleep Button event0
