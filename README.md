@@ -3,4 +3,41 @@ to use in automations etc.
 
 This repo contains files to build a docker image that will monitor input devices connected to a linux machine, for instance bluetooth remote controls, but any input device can be monitored. The resulting keypress codes will be sent to your Home Assistant instance.
 
-First, download the 
+First, download the bt_remote_docker folder and ssh to the `bt_remote_docker/code` directory.
+
+# 1. Find the input device to use
+From there, run `sudo python3 find_devices.py`
+This will list the device names and the device paths for all input devices on your machine. Example output from an Ubuntu machine:
+
+* Telink Trust Keyboard & Mouse event8
+* Telink Trust Keyboard & Mouse System Control event7
+* Telink Trust Keyboard & Mouse Consumer Control event6
+* Telink Trust Keyboard & Mouse event5
+* HDA Intel PCH HDMI/DP,pcm=10 event18
+* HDA Intel PCH HDMI/DP,pcm=9 event17
+* HDA Intel PCH HDMI/DP,pcm=8 event16
+* HDA Intel PCH HDMI/DP,pcm=7 event15
+* HDA Intel PCH HDMI/DP,pcm=3 event14
+* HDA Intel PCH Headphone event13
+* HDA Intel PCH Mic event12
+* DP-2 event11
+* Video Bus event10
+* ITE8708 CIR transceiver event9
+* SG.Ltd SG Control Mic event4
+* SG.Ltd SG Control Mic Keyboard event3
+* Power Button event2
+* Power Button event1
+* Sleep Button event0
+
+In my case, the remote controls I want is named
+`SG.Ltd SG Control Mic Keyboard` located in the path /dev/input/event3
+
+# 2 Edit the `config.yaml` file
+Copy the name to the devices list in the config.yaml file and edit all other relevat entries in the config file.
+
+# 3 Build and run the docker container
+Make sure the build.sh and run.sh scripts are executable by `sudo chmod +x build.sh && sudo chmod +x run.sh`
+Now build the container with `./build.sh`
+If the build was successful (You can ignore any pip version warning) procced to run the container with `./run.sh`
+
+
