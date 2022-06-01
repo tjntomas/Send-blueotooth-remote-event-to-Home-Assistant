@@ -4,10 +4,13 @@ This repo contains files to build a docker container that will monitor input dev
 
 This assumes that you know how docker containers are built and run and that you have already paired your bluetooth remote with the linux machine so I'm not including any instructions for pairing or for using the docker commands.
 
-First, download the bt_remote_docker folder and ssh to the `bt_remote_docker/code` directory.
+
 
 # 1. Find the input device to use
-From there, run `sudo python3 find_devices.py`
+
+First, download the bt_remote_docker folder and ssh to the `bt_remote_docker/code` directory.
+Make sure you have pip installed required modules in the `/code/reqs.txt`file. They are only needed to run the `find_devices.py` script.
+Run `sudo python3 find_devices.py`
 This will list the device names and the device paths for all input devices on your machine. Example output from an Ubuntu machine:
 
 * Telink Trust Keyboard & Mouse event8
@@ -30,7 +33,7 @@ This will list the device names and the device paths for all input devices on yo
 * Power Button event1
 * Sleep Button event0
 
-In my case, the remote controls I want is named
+In my case, the remote control I want is named
 `SG.Ltd SG Control Mic Keyboard` located in the path `/dev/input/event3`
 
 # 2 Edit the `config.yaml` file
