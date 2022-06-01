@@ -51,3 +51,7 @@ change `/home/dev/py/bt_remote` to the local path where you store the config.yam
 # 5 Run the container
 Now run the container with `./run.sh`
 
+# 6 View the event in Home Asssistant
+Open developers tools in HA and go to events.
+In the "event to subscribe to" field, enter the name chosen for the ha event, default is `mi_bt_remote` and press the "Start listening" button. You should no see the incoming events when a remote button is pressed.
+
